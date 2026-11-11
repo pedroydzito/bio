@@ -1,0 +1,199 @@
+/* Pedro Lima — link da bio, mesmo sistema visual do Kit do Designer de Marca */
+:root {
+  --ink: #060312;
+  --white: #ffffff;
+  --soft: #f6f6f6;
+  --lima: #a3e10a;
+  --verde: #2bce4d;
+  --barra: #c9c8ce;
+  --ponto: #d9d8dd;
+  --radius-card: 20px;
+  --radius-btn: 14px;
+  --content: 1120px;
+  --pad: 20px;
+}
+
+@font-face {
+  font-family: "Plus Jakarta Sans";
+  src: url("/fonts/PlusJakartaSans-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Plus Jakarta Sans";
+  src: url("/fonts/PlusJakartaSans-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Plus Jakarta Sans";
+  src: url("/fonts/PlusJakartaSans-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Plus Jakarta Sans";
+  src: url("/fonts/PlusJakartaSans-ExtraBold.woff") format("woff");
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  color: var(--ink);
+  background: var(--white);
+  font-family: "Plus Jakarta Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+img { max-width: 100%; height: auto; display: block; }
+a { color: inherit; }
+p { margin: 0; }
+h1, h2, h3 { margin: 0; font-weight: 800; letter-spacing: -0.03em; line-height: 1.15; }
+
+.dots {
+  background-color: var(--white);
+  background-image: radial-gradient(circle at 0 0, var(--ponto) 1.3px, transparent 1.4px);
+  background-size: 30px 30px;
+  background-position: 60px 60px;
+}
+
+.links-page { min-height: 100vh; }
+.links-main {
+  width: min(390px, calc(100% - 32px));
+  margin: 0 auto;
+  padding: 40px 0 48px;
+}
+.links-hero { text-align: center; margin-bottom: 28px; }
+.avatar {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  margin: 0 auto 16px;
+  object-fit: cover;
+}
+.links-hero h1 {
+  font-size: 28px;
+  letter-spacing: -0.035em;
+}
+.rule {
+  display: block;
+  width: 80px;
+  height: 8px;
+  border-radius: 4px;
+  background: var(--lima);
+  margin: 16px 0 20px;
+}
+.rule-sm {
+  width: 64px;
+  height: 6px;
+  margin: 10px auto 12px;
+}
+.links-hero .lead {
+  font-size: 16px;
+  font-weight: 500;
+  margin: 8px 0 0;
+}
+.links-hero .rule-sm {
+  margin: 12px auto 0;
+}
+.handle {
+  font-weight: 500;
+  color: var(--ink);
+  letter-spacing: -0.01em;
+}
+.links-hero .handle { font-size: 15px; }
+
+.link-list {
+  display: grid;
+  gap: 12px;
+}
+
+.link-btn {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  padding: 14px 16px;
+  background: var(--white);
+  color: var(--ink);
+  border: 2px solid var(--ink);
+  border-radius: var(--radius-btn);
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+  cursor: pointer;
+  transition: transform 0.12s ease, box-shadow 0.12s ease, background 0.12s ease;
+}
+.link-btn:hover { background: var(--soft); }
+.link-btn:focus-visible {
+  outline: 3px solid var(--lima);
+  outline-offset: 3px;
+}
+
+.link-icon {
+  flex: 0 0 auto;
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  background: var(--soft);
+  border: 1.5px solid var(--barra);
+  display: grid;
+  place-items: center;
+}
+.link-icon svg {
+  width: 22px;
+  height: 22px;
+  display: block;
+}
+.link-label { flex: 1 1 auto; text-align: left; }
+
+.link-btn-featured {
+  background: var(--ink);
+  color: var(--white);
+  border-color: var(--ink);
+}
+.link-btn-featured:hover {
+  background: #161221;
+  box-shadow: 0 6px 16px rgba(6, 3, 18, 0.18);
+}
+.link-btn-featured .link-icon {
+  background: #161221;
+  border-color: #3a3744;
+}
+.link-btn-featured .link-icon svg { color: var(--white); }
+
+.tag-novo {
+  flex: 0 0 auto;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--lima);
+  color: var(--ink);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  text-transform: lowercase;
+  line-height: 1;
+  padding: 5px 8px;
+  border-radius: 999px;
+}
+
+.links-foot {
+  text-align: center;
+  margin-top: 28px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--ink);
+}
