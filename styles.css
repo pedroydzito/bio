@@ -230,3 +230,6 @@ h1, h2, h3 { margin: 0; font-weight: 800; letter-spacing: -0.03em; line-height: 
   font-weight: 500;
   color: var(--ink);
 }
+
+/* Formas do ícone preenchidas de branco, como no ícone do Kit */
+.link-icon svg > :not([fill]) { fill: var(--white); }
